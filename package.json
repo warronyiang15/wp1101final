@@ -2,8 +2,5 @@
   "name": "final2",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-        "start": "cd backend && yarn start"
-    }
+  "license": "MIT"
 }

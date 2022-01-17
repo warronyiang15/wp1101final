@@ -3,6 +3,7 @@ import db from './db'
 import Query from './Resolvers/Query'
 import Mutation from './Resolvers/Mutation';
 import Subscription from './Resolvers/Subscription';
+import { fetch } from './Utility/credentials';
 
 const pubsub = new PubSub()
 pubsub.ee.setMaxListeners(30);

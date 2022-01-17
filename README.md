@@ -8,7 +8,6 @@ yarn add @mui/material @emotion/react @emotion/styled
 yarn add uuidv4
 yarn add uuid
 yarn add @types/uuid
-yarn add apollo-server-express
 ```
 
 ***

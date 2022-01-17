@@ -61,7 +61,7 @@ const Query = {
         const result = await Room.find({ room_joiner : '' });
         if(result == null) return null;
         for(let i = 0;i < result.length;i++){
-            
+            console.log(result[i].room_id, result[i].room_lock);
             if(!result[i].room_lock){
                 return result[i].room_id;
             }

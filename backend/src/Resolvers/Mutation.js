@@ -141,7 +141,7 @@ const Mutation = {
     async createGame(parent, { room_id, player1, player2 } , { db , pubsub }, info){
         const room = await Room.findOne({ room_id : room_id });
         if(!room){
-            
+            console.log('not found room');
             return null;
         }
         const newGame = new Game({
@@ -275,7 +275,7 @@ const Mutation = {
         });
         await newHistory.save();
         const room = await Room.findOne({ room_id : room_id });
-        
+        if(room == null) console.log('something is wrong');
         room.room_game = '';
         room.room_onready[0] = room.room_onready[1] = false;
         const result = await room.save();
